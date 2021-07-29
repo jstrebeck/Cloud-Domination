@@ -10,15 +10,21 @@ function initMap() {
   var Azure = "#219ebc";
   var GCP = "#ffb703";
 
-  for (val in states) {
+  colors = [AWS, Azure, GCP]
+
+  function jobs(val1) {
+    highlight = colors[Math.floor(Math.random()*colors.length)];
     const val = new google.maps.Polygon({
-      paths: poly.Alaska,
-      strokeColor: AWS,
+      paths: val1,
+      strokeColor: highlight,
       strokeOpacity: 0.8,
       strokeWeight: 2,
-      fillColor: AWS,
+      fillColor: highlight,
       fillOpacity: 0.35,
     });
     val.setMap(map);
   }
+
+  states.forEach(element => {jobs(element)});
+
 }
