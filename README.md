@@ -1,6 +1,6 @@
 # Cloud-Domination
 This project is to demonstrate which cloud platform is dominant per state.
-To see which provider is dominate in your sate check out [clouddomination.net](clouddomination.net)
+To see which provider is dominate in your sate check out [clouddomination.net](https://clouddomination.net)
 
 
 The first question many new cloud engineers ask is what cloud platform should I learn from the big three? The most common answer to this question that I have found is to study the platform that has the most job postings in your area. 
@@ -18,7 +18,7 @@ As I was working through this project it became very apparent that my Idea had s
 
 1. DynamoDB was chosen as the database for Cloud Domination. States were used as the PK for our states table. Three additional columns were created to represent the job postings for each provider being AWS, Azure, and GCP. Using a serverless offering greatly reduced the time it normally takes me to deploy and troubleshoot a database server and connect it to your application. This option was also extremely easy to connect to our Lambda function by just creating a role with access to both services. At this stage in the process we got our first look at job postings for all 50 states in one place, it became very apparent which cloud provider had the most job postings.
 
-1. Now that we had a database populated with our data we need an easy way to visualize it. My goal was to create a web app that highlights each state with whichever provider is dominant according to job postings on Indeed. Google provides their [Maps API] (https://developers.google.com/maps/gmp-get-started) which is configured with javascript. The one downside to this solution is they don’t have a built-in way to select states at this time. A workaround is to draw shapes using Longitude and Lattitude coordinates to draw out each state which is stored in the States.js file. Another Javascript function is created to pull the provider listings by state, determine which provider has the greatest value, and assign that state to the color which matches their provider where AWS is orange, Azure is blue, and GCP is yellow. This webpage is hosted on an EC2 t2.micro Ubuntu using Ngnix as the webserver.
+1. Now that we had a database populated with our data we need an easy way to visualize it. My goal was to create a web app that highlights each state with whichever provider is dominant according to job postings on Indeed. Google provides their [Maps API](https://developers.google.com/maps/gmp-get-started) which is configured with javascript. The one downside to this solution is they don’t have a built-in way to select states at this time. A workaround is to draw shapes using Longitude and Lattitude coordinates to draw out each state which is stored in the States.js file. Another Javascript function is created to pull the provider listings by state, determine which provider has the greatest value, and assign that state to the color which matches their provider where AWS is orange, Azure is blue, and GCP is yellow. This webpage is hosted on an EC2 t2.micro Ubuntu using Ngnix as the webserver.
 
 
 1.  Our Elastic Load Balancer simply handles requests and has our one EC2 instance in the target group. In the future, I would like to create a scaling group to dynamically add more EC2 targets to balance across.
