@@ -1,6 +1,6 @@
 # Cloud-Domination
 This project is to demonstrate which cloud platform is dominant per state.
-To see which provider is dominate in your sate check out [clouddomination.net](https://clouddomination.net)
+To see which provider is dominate in your sate check out [clouddomination.net](https://www.clouddomination.net/)
 
 
 The first question many new cloud engineers ask is what cloud platform should I learn from the big three? The most common answer to this question that I have found is to study the platform that has the most job postings in your area. 
@@ -26,3 +26,7 @@ As I was working through this project it became very apparent that my Idea had s
 
 1.  CloudFront is used as our CDN for our webpage to cache the data at all of Amazon’s endpoints. Since our website is used to display timely data our cached information will be invalidated every time our database is updated which is completed with our serverless function. This is where our clients will terminate to view and browse Cloud Domination.
   1.AWS Certificate Manager provides an SSL cert and ties into our domain name of clouddomination.net
+
+## Final Thoughts 
+
+In the following image, you can see that Amazon’s lead to the market holds up today in every state. My hope is to watch this project over time and see the market level out across all providers in the U.S. over the next few years. 
