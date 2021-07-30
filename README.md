@@ -1,5 +1,6 @@
 # Cloud-Domination
 This project is to demonstrate which cloud platform is dominant per state.
+
 To see which provider is dominate in your sate check out [clouddomination.net](https://www.clouddomination.net/)
 
 
@@ -7,7 +8,8 @@ The first question many new cloud engineers ask is what cloud platform should I 
 
 The next step in your journey to becoming a cloud engineer is to deploy some personal projects in the cloud to earn some experience. That’s when I decided to pull all cloud job postings into one place to truly see which cloud platform is dominant.
 
-As I was working through this project it became very apparent that my Idea had some flaws that I will discuss later. However, my goal for this project was just to give me a custom application where I can hone my cloud skills.
+As I was working through this project it became very apparent that my Idea had some flaws that I will discuss later. However, my goal for this project was just to give me a custom application where I can hone my cloud skills. The following image is what I imagined the final result to look like.
+![Idea](https://raw.githubusercontent.com/jstrebeck/Cloud-Domination/main/img/Idea.png)
 
 ## The following is my infrastructure design for this project. 
 
@@ -30,3 +32,5 @@ As I was working through this project it became very apparent that my Idea had s
 ## Final Thoughts 
 
 In the following image, you can see that Amazon’s lead to the market holds up today in every state. My hope is to watch this project over time and see the market level out across all providers in the U.S. over the next few years. 
+
+![Final](https://raw.githubusercontent.com/jstrebeck/Cloud-Domination/main/img/Final.png)
