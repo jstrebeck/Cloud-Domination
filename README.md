@@ -13,7 +13,7 @@ As I was working through this project it became very apparent that my Idea had s
 
 ## The following is my infrastructure design for this project. 
 
-![Cloud Diagram](https://raw.githubusercontent.com/jstrebeck/Cloud-Domination/main/Cloud%20Domination%20Diagram.png)
+![Cloud Diagram](https://raw.githubusercontent.com/jstrebeck/Cloud-Domination/main/img/Cloud%20Domination%20Diagram.png)
 
 1. The first step will be to gather job listings from a popular job site. Indeed was chosen since it had an easy-to-use API. Unfortunately, after two months I am still on the waiting list to get access to their API. I took this opportunity to learn more about web scraping with Python. I created a function using the requests library for HTTP requests. The scraper iterates over jobs postings for all 50 states and for all three of the major cloud providers. Once that data is pulled in it is parsed using Beautiful Soup. This function could then be deployed to AWS Lambda and a schedule can be created to regularly run this function and in turn, update our data. Now that we have our information it needs to be uploaded to a database. In the future, I would like to revisit this project to use their API to pull this data instead.
 
